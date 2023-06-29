@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-color: #F8B145;
+  --dark-blue: #94AFC2;
+  --dark-green: #9EBEBB;
+  --red-color: #ED6C55;
+  --pink-color: #F3B8AE;
+}
+
+.color-brand {
+  color: var(--brand-color);
+}
+
+.color-blue {
+  color: var(--dark-blue);
+}
+
+.bg-dark-blue {
+  background-color: var(--dark-blue);
+}
+
+.color-green {
+  color: var(--dark-green);
+}
+
+.bg-dark-green {
+  background-color: var(--dark-green);
+}
+
+.color-red {
+  color: var(--red-color);
+}
+
+.color-pink {
+  color: var(--pink-color);
+}
+
+
+
+@layer components {
+  .under-score {
+    @apply hover:py-2 hover:border-b-2 hover:border-orange-300;
+  }
+}

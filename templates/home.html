@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Emo Programming Language</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+  </head>
+  <body>
+    <div class="flex flex-col h-screen">
+      <div class="flex-grow">
+        <div class="px-8 py-4 border-b border-zinc-200">
+          <nav class="flex justify-between ">
+            <a href="/" class="font-bold text-2xl color-brand">Emo</a>
+            <ul class="flex gap-4 text-gray-800 ">
+              <li><a href="#" class="under-score">Get Started</a></li>
+              <li><a href="https://github.com/emo-lang/emo" target="_blank" class="under-score">GitHub</a></li>
+              <li><a href="https://twitter.com/emo_lang_org" target="_blank" class="under-score">Twitter</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="w-2/3 mx-auto pt-16 text-center">
+          <h1 class="text-zinc-600 text-4xl" >The Emo Programming Language</h1>
+          <p class="text-zinc-400 mt-6">A statically typed, object-oriented, functional programming language with clean syntax and super meta programming capabilities.</p>
+          <p class="color-red text-xl mt-4">Think Emo as being Go + Ruby + Python.</p>
+        </div>
+
+        <div class="px-8 py-4 mt-16">
+          <section class="text-gray-600 border-t border-t-zinc-200 pt-4">
+            <h2 class="text-2xl text-black">Hello, Emo!</h2>
+            <p class="mt-4">The <code class="color-red">`Hello, world`</code> example in Emo:</p>
+            <div class="mt-4 mx-4 bg-black font-mono">
+              <div class="py-1 px-4 bg-dark-green text-white font-bold">hello.em</div>
+              <div class="py-1 px-4 text-white">
+                <ul>
+                  <li># print "Hello, Emo!" to the console</li>
+                  <li>print("Hello, Emo!")</li>
+                </ul>
+              </div>
+            </div>
+            <p class="mt-4 mx-4">or by defing a function...</p>
+            <div class="mt-4 mx-4 bg-black font-mono">
+              <div class="py-1 px-4 bg-dark-green text-white font-bold">hello_function.em</div>
+              <div class="py-1 px-4 text-white">
+                <ul>
+                  <li># define a function to be called later</li>
+                  <li># you can omit the parentheses if no params required</li>
+                  <li>def hello_emo</li>
+                  <li class="px-6">print("Hello, Emo!")</li>
+                  <li>end</li>
+                  <li class="h-5"></li>
+                  <li>hello_emo()</li>
+                </ul>
+              </div>
+            </div>
+            <div class="mt-4 mx-4 bg-black font-mono">
+              <div class="py-1 px-4 bg-dark-green text-white font-bold">hello_function_params.em</div>
+              <div class="py-1 px-4 text-white">
+                <ul>
+                  <li>def hello_name(name: String)</li>
+                  <li class="px-6">print("Hello, {name}!")</li>
+                  <li>end</li>
+                  <li class="h-5"></li>
+                  <li>def hello_emo</li>
+                  <li class="px-6">hello_name("Emo")</li>
+                  <li>end</li>
+                  <li class="h-5"></li>
+                  <li>hello_emo()</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="mt-4 mx-4 bg-black font-mono">
+              <div class="py-1 px-4 bg-dark-green text-white font-bold">hello_function_params_with_return_value.em</div>
+              <div class="py-1 px-4 text-white">
+                <ul>
+                  <li>def emo_name -> String</li>
+                  <li class="px-6">"Emo"</li>
+                  <li>end</li>
+                  <li class="h-5"></li>
+                  <li>def hello_name(name: String) -> None</li>
+                  <li class="px-6">print("Hello, {name}!")</li>
+                  <li>end</li>
+                  <li class="h-5"></li>
+                  <li>def hello_emo</li>
+                  <li class="px-6">hello_name(emo_name())</li>
+                  <li>end</li>
+                  <li class="h-5"></li>
+                  <li>hello_emo()</li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="mt-4 mx-4">or by defing a class...</p>
+
+            <div class="mt-4 mx-4 bg-black font-mono">
+              <div class="py-1 px-4 bg-dark-green text-white font-bold">hello_class.em</div>
+              <div class="py-1 px-4 text-white">
+                <ul>
+                  <li>class Hello</li>
+                  <li class="px-6"># you can add `()` after the function name</li>
+                  <li class="px-6"># even without params</li>
+                  <li class="px-6">def emo() -> None</li>
+                  <li class="px-12">print("Hello, Emo!")</li>
+                  <li class="px-6">end</li>
+                  <li>end</li>
+                  <li class="h-5"></li>
+                  <li>Hello.new().emo()</li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="mt-4 mx-4">or by defing a class with <code class="color-red text-sm">static</code> and <code class="color-red text-sm italic">private</code> methods...</p>
+
+            <div class="mt-4 mx-4 bg-black font-mono">
+              <div class="py-1 px-4 bg-dark-green text-white font-bold">hello_class_methods.em</div>
+              <div class="py-1 px-4 text-white">
+                <ul>
+                  <li>class Hello</li>
+                  <li class="h-5"></li>
+                  <li class="px-6"># constructor</li>
+                  <li class="px-6">def init</li>
+                  <li class="px-12">pass</li>
+                  <li class="px-6">end</li>
+                  <li class="h-5"></li>
+                  <li class="px-6"># prefix method name with an underscore(_)</li>
+                  <li class="px-6"># to define a private method</li>
+                  <li class="px-6">def <code class="color-pink">_name</code> -> String</li>
+                  <li class="px-12">"Emo"</li>
+                  <li class="px-6">end</li>
+                  <li class="h-5"></li>
+                  <li class="px-6"># prefix method name with a dot(.)</li>
+                  <li class="px-6"># to define a static method</li>
+                  <li class="px-6">def <code class="color-brand">.emo</code></li>
+                  <li class="px-12">print("Hello, {<code class="color-pink">_name()</code>}")</li>
+                  <li class="px-6">end</li>
+                  <li>end</li>
+                  <li class="h-5"></li>
+                  <li>Hello.<code class="color-brand">emo()</code></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="text-gray-600 mt-10 border-t border-t-zinc-200 pt-4">
+            <h2 class="text-2xl text-black">Dive deeper</h2>
+            <p class="mt-4 text-gray-400">... (work in progress)</p>
+          </section>
+
+          <section class="text-gray-600 mt-10 border-t border-t-zinc-200 pt-4">
+            <h2 class="text-2xl text-black">Installation</h2>
+            <p class="mt-4">Install `Emo` on macOS:</p>
+            <div class="mt-4 mx-4 bg-black font-mono">
+              <div class="py-1 px-4 text-white">$ brew install emo</div>
+            </div>
+
+            <p class="mt-4">Check everything works:</p>
+            <div class="mt-4 mx-4 bg-black font-mono">
+              <div class="py-1 px-4 text-white">$ emo --version </div>
+              <div class="py-1 px-4 text-gray-300">v0.0.1</div>
+            </div>
+          </section>
+        </div>
+
+        <div class="my-10 px-8 py-16 bg-dark-green text-center text-4xl font-mono">Happy hacking with Emo😎!</div>
+      </div>
+
+      <footer class="text-zinc-700 py-4">
+        <div class="container mx-auto text-center">
+          <p class="text-sm">&copy; 2023 The Emo Team</p>
+        </div>
+      </footer>
+  </body>
+
+</html>

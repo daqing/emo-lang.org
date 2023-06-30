@@ -8,7 +8,7 @@ freeze:
   pip freeze > requirements.txt
 
 build:
-  docker build -t emo_website .
+  docker build -t emo_website --platform linux/amd64 .
 
 run:
   docker run -p 3266:8000 emo_website
